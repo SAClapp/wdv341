@@ -1,0 +1,63 @@
+/* SCSS Document */
+body {
+  text-align: center;
+  background-color: rgb(15, 94, 196);
+}
+
+form, #response {
+  width: 300px;
+  margin: auto;
+  background-color: rgb(46, 181, 226);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  border-radius: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+form p label, form p, #response p label, #response p {
+  font-weight: 600;
+}
+
+form legend, header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: aliceblue;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.144);
+  background-color: rgb(255, 102, 0);
+}
+
+h1, h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: aliceblue;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.144);
+}
+
+#button, #button2 {
+  background-color: rgb(255, 102, 0);
+  color: aliceblue;
+  border-radius: 2.5px;
+  border-color: rgb(255, 123, 0);
+}
+
+textarea {
+  resize: none;
+  width: 275px;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    margin: 0px;
+  }
+  form {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  form legend {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=style.css.map */

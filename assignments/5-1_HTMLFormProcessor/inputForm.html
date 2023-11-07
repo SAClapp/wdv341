@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5-1: HTML Form Processor</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<h1>WDV341 Intro PHP</h1>
+<h2>5-1: HTML Form Processor</h2>
+<form id="form1" name="form1" method="post" action="formHandler.php">
+
+  <legend>DMACC Student Information Form</legend>
+  
+  <p>
+  	<label for="firstName">First Name:</label> 
+    <input type="text" name="firstName" id="firstName" required/>
+  </p>
+  
+  <p>
+  	<label for="lastName">Last Name:</label> 
+    <input type="text" name="lastName" id="lastName" required/>
+  </p>
+  
+  <p>
+  	<label for="schoolName">School Name:</label> 
+    <input type="text" name="schoolName" id="schoolName" required/>
+  </p>
+
+  <p>
+    <label for="emailAddress">Email Address:</label>
+    <input type="email" name="emailAddress" id="emailAddress" required/>
+  </p>
+
+  <p>
+    <p>What is your current academic standing?</p>
+    <input type="radio" id="highSchooler" name="academicStanding" value="High Schooler" required>
+    <label for="highSchooler">High School</label><br>
+    <input type="radio" id="freshman" name="academicStanding" value="Freshman">
+    <label for="freshman">Freshman</label><br>
+    <input type="radio" id="sophomore" name="academicStanding" value="Sophomore">
+    <label for="sophomore">Sophomore</label><br>
+  </p>
+
+  <p>
+    <label for="selectedMajor">Please select your Major</label>
+    <select name="selectedMajor" id="selectedMajor" required>
+      <option value="">Please select a Major</option>
+      <option value="CIS">Computer Information Systems</option>
+      <option value="GRD">Graphic Design</option>
+      <option value="WDV">Web Development</option>
+    </select>
+  </p>
+
+  <p>
+    <p>What information do you need from us?</p>
+    <input type="checkbox" id="programInfo" name="programInfo" value="Program Information">
+    <label for="programInfo">Please contact me with program information</label><br>
+    <input type="checkbox" id="advisorContactInfo" name="advisorContactInfo" value="Program Advisor Contact Information">
+    <label for="advisorContactInfo">I would like to contact an program advisor</label><br><br>
+  </p>
+
+  <p>
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="5">
+
+    </textarea>
+  </p>
+  <p>
+    <input type="submit" name="button" id="button" value="Submit" />
+    <input type="reset" name="button2" id="button2" value="Reset" />
+  </p>
+  
+</form>
+
+<p>&nbsp;</p>
+</body>
+
+</html>
