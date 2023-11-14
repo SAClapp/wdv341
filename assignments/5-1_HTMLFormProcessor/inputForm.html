@@ -6,6 +6,17 @@
 <title>5-1: HTML Form Processor</title>
 <link rel="stylesheet" href="style.css">
 
+<!--reCAPTCHA-->
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcDTQ4pAAAAAM83HYSbExhHuicpE6qkCV87bz4n" async defer></script>
+  <script>
+    function onClick(e) {
+      e.preventDefault();
+      grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute('6LcDTQ4pAAAAAM83HYSbExhHuicpE6qkCV87bz4n', {action: 'SUBMIT'});
+      });
+    }
+  </script>
+
 </head>
 
 <body>
@@ -70,10 +81,16 @@
     </textarea>
   </p>
   <p>
-    <input type="submit" name="button" id="button" value="Submit" />
+    <input type="submit" name="button" id="button" value="Submit" 
+    class="g-recaptcha" data-sitekey="6LcDTQ4pAAAAAM83HYSbExhHuicpE6qkCV87bz4n" data-callback='onSubmit' data-action='submit'/>
     <input type="reset" name="button2" id="button2" value="Reset" />
   </p>
   
+  <script>
+    function onSubmit(token) {
+      document.getElementById("form1").submit();
+    }
+ </script>
 </form>
 
 <p>&nbsp;</p>

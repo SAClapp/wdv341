@@ -73,5 +73,19 @@ else {
 		?>
     </p>
 </div>
+Table to verify that reCAPTCHA is successfully connected and running
+		<?php
+		echo "<table border='1'>";
+echo "<tr><th>Field Name</th><th>Value of field</th></tr>";
+foreach($_POST as $key => $value)
+{
+    echo '<tr class=colorRow>';
+    echo '<td>',$key,'</td>';
+    echo '<td>',$value,'</td>';
+    echo "</tr>";
+} 
+echo "</table>";
+echo "<p>&nbsp;</p>";
+?>
 </body>
 </html>
