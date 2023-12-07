@@ -51,6 +51,13 @@ body {
     width: 275px;
   }
 
+  #favFood {
+    display: none;
+  }
+  label[for="favFood"] {
+    display: none;
+  }
+
   @media screen and (max-width: 400px) {
     body {
       margin: 0px;

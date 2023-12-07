@@ -1,4 +1,29 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+$firstName = $_POST["firstName"];
+$lastName = $_POST["lastName"];
+$emailAddress = $_POST["emailAddress"];
+
+$favFood = $_POST["favFood"];
+
+if( empty($favFood) ){
+
+
+if (isset($_POST["selectedMajor"])){
+	$selectedMajor = $_POST["selectedMajor"];
+}
+else {
+	$selectedMajor = "";
+}
+
+if (isset($_POST["academicStanding"])){
+	$academicStanding = $_POST["academicStanding"];
+}
+else {
+	$academicStanding = "";
+}
+
 if (isset($_POST["programInfo"])){
 	$programInfo = $_POST["programInfo"];
 }
@@ -19,6 +44,8 @@ if (isset($_POST["comments"])){
 else {
 	$comments = "";
 }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,10 +55,6 @@ else {
 	<title>5-1: HTML Form Processor</title>
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
-	
-</body>
-</html>
 
 <body>
 <h1>WDV341 Intro PHP</h1>
@@ -39,12 +62,15 @@ else {
 <div id="response">
 	<header>Form Submitted Successfully</header>
 	<p>
-        Dear <?php echo $_POST["firstName"]; ?>,<br>
+	Thank you <?php		
+	echo $firstName . " " . $lastName;
+	?><br><br>
+        Dear <?php echo $firstName; ?>,<br>
 		Thank for you for your interest in DMACC.<br><br>
-		We have you listed as a <?php echo $_POST["academicStanding"]; ?> starting this fall.<br>
-		You have declared <?php echo $_POST["selectedMajor"]; ?> as your major.<br>
+		We have you listed as a <?php echo $academicStanding; ?> starting this fall.<br>
+		You have declared <?php echo $selectedMajor; ?> as your major.<br>
 		Based upon your responses we will provide the following information 
-		in our confirmation email to you at <?php echo $_POST["emailAddress"]; ?>.<br><br>
+		in our confirmation email to you at <?php echo $emailAddress; ?>.<br><br>
 		<?php 
 		if (isset($programInfo)) {
 			echo $programInfo, "<br>";
@@ -70,11 +96,13 @@ else {
 				else {
 					//outputs nothing
 				}
-		?>
+		?><br>
+		A signup confirmation has been sent to <?php echo $emailAddress?>. Thank you for your support!
     </p>
 </div>
+<!--
 Table to verify that reCAPTCHA is successfully connected and running
-		<?php
+<?php
 		echo "<table border='1'>";
 echo "<tr><th>Field Name</th><th>Value of field</th></tr>";
 foreach($_POST as $key => $value)
@@ -87,5 +115,21 @@ foreach($_POST as $key => $value)
 echo "</table>";
 echo "<p>&nbsp;</p>";
 ?>
+-->
+
+<?php
+			} //Valid Data Entered By Real User
+
+
+
+
+else {
+	//a bot entered this data, form is not valid
+	echo "<h1 style='color:red;'>Form Data Invalid!!!</h1>";
+}
+
+}
+?>
+
 </body>
 </html>
