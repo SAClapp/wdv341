@@ -1,0 +1,128 @@
+/*SCSS Document*/
+body {
+  background-color: #5C2B00;
+  padding: 15px;
+}
+
+header, footer {
+  background-color: #BD6A08;
+  padding: 10px;
+}
+
+#side_dish {
+  display: none;
+}
+
+label[for=side_dish] {
+  display: none;
+}
+
+main {
+  padding: 50px;
+}
+
+.space {
+  padding: 10px;
+}
+
+nav {
+  font-weight: bold;
+  background-color: #F17C10;
+}
+
+.btn {
+  outline: 3px solid #b3b3b3;
+}
+
+a:hover {
+  outline: #a74a0c;
+}
+
+footer {
+  text-align: center;
+  color: #ff9d4d;
+}
+
+h1 {
+  font-family: "Berkshire Swash", cursive;
+  color: #512601;
+}
+
+form {
+  padding: 10px;
+  text-align: justify;
+  font-family: "Berkshire Swash", cursive;
+}
+
+.container, [class^=col-] {
+  outline: 15px solid #ccc;
+  padding: 15px;
+  background-color: #9b1b05;
+}
+
+h2, h3, h4, h5, p {
+  font-family: "Berkshire Swash", cursive;
+  color: rgba(68, 33, 4, 0.8);
+}
+
+.info::first-letter {
+  color: #ff7300;
+  font-size: x-large;
+}
+
+ul li {
+  color: rgba(68, 33, 4, 0.8);
+}
+
+.back {
+  margin: 10px;
+  font-weight: bold;
+}
+
+form p {
+  color: black;
+}
+
+span {
+  font-weight: bold;
+}
+
+figcaption {
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  border: 5px solid #512601;
+  padding: 0px;
+  margin: none;
+  width: auto;
+}
+
+#favFood {
+  display: none;
+}
+
+label[for=favFood] {
+  display: none;
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    margin: auto;
+    padding: 0px;
+    margin-left: 0;
+  }
+  .container, [class^=col-] {
+    width: 367px;
+  }
+  main {
+    padding: 0px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  #desc {
+    display: none;
+  }
+  /*colors: #a30000*/
+}/*# sourceMappingURL=admin.css.map */
