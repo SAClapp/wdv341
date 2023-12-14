@@ -1,0 +1,8 @@
+/* SCSS Document */
+#events_dish {
+  display: none;
+}
+
+label[for=events_dish] {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
